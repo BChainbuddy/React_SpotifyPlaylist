@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Playlist from "./components/Playlist";
+import Tracklist from "./components/Tracklist";
+import logo from "./logo.svg";
+import "./styles/App.css";
+import React, { useState } from "react";
+
+const songs = [
+  { name: "I like it like that", artist: "Cardi B", album: "IDK", id: "5" },
+  { name: "Baby", artist: "Justin Bieber", album: "IDKK", id: "5" },
+];
 
 function App() {
+  const [songlist, setSongList] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <p>JAMMING</p>
       </header>
+      <Playlist playlist={{ name: "myPlaylist", tracks: songs }}></Playlist>
+      {/* <Tracklist song={songs} /> */}
     </div>
   );
 }
