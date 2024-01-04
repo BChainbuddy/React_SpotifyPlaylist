@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import Track from "./Track";
 
-function Tracklist({ song }) {
-  const [songs, setSongs] = useState([]);
-
+function Tracklist({ song, removeSong }) {
   return song.map((item) => (
-    <Track
-      name={item.name}
-      artist={item.artist}
-      album={item.album}
-      key={item.id}
-    />
+    <div key={item.id}>
+      <Track name={item.name} artist={item.artists} album={item.album.name} />
+      <button
+        onClick={() => {
+          removeSong(item.name);
+        }}
+      >
+        REMOVE
+      </button>
+    </div>
   ));
 }
 
