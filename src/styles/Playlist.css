@@ -1,0 +1,35 @@
+.containerPlaylist {
+  width: 300px;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 30, 31, 0.15);
+  padding: 2px 2px;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.name {
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  font-size: 2rem;
+  color: gray;
+  padding-left: 0;
+  border: 0;
+}
+
+.name:focus {
+  outline: none;
+  color: white;
+}
+
+.renameButton {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 1px;
+}
+
+.playlist {
+  border-bottom: 1px solid white;
+}

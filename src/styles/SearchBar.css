@@ -1,0 +1,23 @@
+.containerSearch {
+  width: 300px;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 30, 31, 0.15);
+  padding: 2px 2px;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.searchBar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  font-size: 2rem;
+  color: gray;
+  border-bottom: 1px solid white;
+}
+
+.searchBar:focus {
+  outline: none;
+  color: white;
+}

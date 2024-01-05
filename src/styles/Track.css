@@ -1,0 +1,11 @@
+.track {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.item {
+  margin: 1px;
+  padding: 0;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SearchResults from "./SearchResults";
+import "./../styles/SearchBar.css";
 
 function SearchBar({
   accessToken,
@@ -19,7 +20,7 @@ function SearchBar({
     }
   };
 
-  const [search, setSearch] = useState("Search songs...");
+  const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -49,8 +50,13 @@ function SearchBar({
   }, [search]);
 
   return (
-    <div>
-      <input value={search} onChange={handleSearch} />
+    <div className="containerSearch">
+      <input
+        value={search}
+        onChange={handleSearch}
+        className="searchBar"
+        placeholder="Search for songs..."
+      />
       <SearchResults
         tracks={searchedTracks}
         addSelectedSong={addSelectedSong}

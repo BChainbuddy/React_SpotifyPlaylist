@@ -80,24 +80,29 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="header">
         <p>JAMMING</p>
       </header>
-      <SearchBar
-        accessToken={accessToken}
-        setSearchedTracks={setSearchedTracks}
-        searchedTracks={searchedTracks}
-        playlist={playlist}
-        setPlaylist={setPlaylist}
-      />
-      <Playlist
-        playlist={playlist}
-        setPlaylist={setPlaylist}
-        accessToken={accessToken}
-      ></Playlist>
-      <button onClick={removeToken}>LOGOUT</button>
+      <main>
+        <SearchBar
+          accessToken={accessToken}
+          setSearchedTracks={setSearchedTracks}
+          searchedTracks={searchedTracks}
+          playlist={playlist}
+          setPlaylist={setPlaylist}
+        />
+        <Playlist
+          playlist={playlist}
+          setPlaylist={setPlaylist}
+          accessToken={accessToken}
+        ></Playlist>
+      </main>
     </div>
   );
+}
+
+{
+  /* <button onClick={removeToken}>LOGOUT</button> */
 }
 
 export default App;

@@ -1,18 +1,21 @@
 import React from "react";
+import "./../styles/Track.css";
 
 function Track({ name, artist, album }) {
   return (
-    <div>
-      <p>{name}</p>
-      {artist.length > 1 ? <p>Artists:</p> : <p>Artist:</p>}
+    <div className="track">
+      <p className="item">{name}</p>
+      {artist.length > 1 ? <p>Artists:</p> : <p className="item">Artist:</p>}
       {artist && (
         <div>
           {artist.map((item, i) => (
-            <p key={i}>{item.name}</p>
+            <p key={i} className="item">
+              {item.name}
+            </p>
           ))}
         </div>
       )}
-      <p>{album}</p>
+      <p className="item">{album}</p>
     </div>
   );
 }
