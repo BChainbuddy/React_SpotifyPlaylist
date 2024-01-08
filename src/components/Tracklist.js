@@ -7,6 +7,9 @@ function Tracklist({ song, removeSong }) {
     <div className="tracklist">
       {song.map((item) => (
         <div
+          onClick={() => {
+            removeSong(item.name);
+          }}
           key={item.id}
           style={{
             flexDirection: "row",
@@ -19,15 +22,16 @@ function Tracklist({ song, removeSong }) {
             name={item.name}
             artist={item.artists}
             album={item.album.name}
+            image={item.album.images[0].url}
           />
-          <button
+          {/* <button
             onClick={() => {
               removeSong(item.name);
             }}
             style={{ height: 20, width: 80 }}
           >
             REMOVE
-          </button>
+          </button> */}
         </div>
       ))}
     </div>

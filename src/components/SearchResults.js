@@ -7,6 +7,9 @@ function SearchResults({ tracks, addSelectedSong }) {
     <div className="searchresults">
       {tracks.map((item) => (
         <div
+          onClick={() => {
+            addSelectedSong(item);
+          }}
           key={item.id}
           style={{
             flexDirection: "row",
@@ -19,14 +22,15 @@ function SearchResults({ tracks, addSelectedSong }) {
             name={item.name}
             artist={item.artists}
             album={item.album.name}
+            image={item.album.images[0].url}
           />
-          <button
+          {/* <button
             onClick={() => {
               addSelectedSong(item);
             }}
           >
             ADD
-          </button>
+          </button> */}
         </div>
       ))}
     </div>

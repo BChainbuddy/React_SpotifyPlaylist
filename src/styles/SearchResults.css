@@ -1,4 +1,10 @@
 .searchresults {
   height: 500px;
   overflow-y: scroll;
+  scrollbar-width: none; /* This will hide the scrollbar in Firefox */
+}
+
+.searchresults::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }

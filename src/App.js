@@ -43,7 +43,7 @@ function App() {
     };
 
     const token = getTokenFromUrl().access_token;
-    console.log(getTokenFromUrl());
+    // console.log(getTokenFromUrl());
 
     if (token) {
       console.log("a happens");

@@ -29,7 +29,7 @@ function SearchBar({
   useEffect(() => {
     if (accessToken !== "" && search !== "") {
       try {
-        console.log(accessToken);
+        // console.log(accessToken);
         const params = {
           method: "GET",
           headers: { Authorization: `Bearer ${accessToken}` },
@@ -40,8 +40,13 @@ function SearchBar({
         )
           .then((result) => result.json())
           .then((data) => {
-            setSearchedTracks(data.tracks.items);
-            console.log(data.tracks.items[0].album.name);
+            if (data.tracks) {
+              setSearchedTracks(data.tracks.items);
+              console.log(data.tracks.items[0].album.name);
+              console.log(data.tracks.items[0].album.images[0].url);
+            } else {
+              console.log("No items for this search");
+            }
           });
       } catch (e) {
         console.log(e);

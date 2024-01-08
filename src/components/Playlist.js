@@ -25,17 +25,17 @@ function Playlist({ playlist, setPlaylist, accessToken }) {
   const savePlaylist = async () => {
     // Get user Id
     if (accessToken) {
-      console.log(accessToken);
+      // console.log(accessToken);
       const settings = {
         headers: { Authorization: "Bearer " + accessToken },
       };
       const response = await fetch("https://api.spotify.com/v1/me", settings);
       const data = await response.json();
       const userId = data.id;
-      console.log(userId);
+      // console.log(userId);
 
       // Create a playlist
-      console.log(playlist.name);
+      // console.log(playlist.name);
 
       const attributes = {
         name: playlist.name,
@@ -58,11 +58,11 @@ function Playlist({ playlist, setPlaylist, accessToken }) {
         `https://api.spotify.com/v1/users/${userId}/playlists`,
         settings2
       );
-      console.log(settings2);
+      // console.log(settings2);
       const data2 = await response2.json();
-      console.log(data2);
+      // console.log(data2);
       const playlistId = data2.id;
-      console.log(playlistId);
+      // console.log(playlistId);
 
       // Add tracks to playlist
       if (playlist.tracks.length > 0) {
@@ -70,7 +70,7 @@ function Playlist({ playlist, setPlaylist, accessToken }) {
         let uriList = [];
         for (let i = 0; i < playlist.tracks.length; i++) {
           uriList.push(playlist.tracks[i].uri);
-          console.log(playlist.tracks[i].uri);
+          // console.log(playlist.tracks[i].uri);
         }
         const attributes2 = { uris: uriList, position: 0 };
         const settings3 = {
@@ -86,8 +86,8 @@ function Playlist({ playlist, setPlaylist, accessToken }) {
           `https://api.spotify.com/v1/playlists/${playlistId}/tracks`,
           settings3
         );
-        const data3 = await response3.json();
-        console.log(data3);
+        await response3.json();
+        // console.log(data3);
       } else {
         console.log("No tracks in the playlist");
       }
