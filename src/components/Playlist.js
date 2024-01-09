@@ -110,7 +110,7 @@ function Playlist({ playlist, setPlaylist, accessToken }) {
           placeholder="name of Playlist"
         ></input>
         <div onClick={savePlaylist} className="renameButton">
-          Save
+          SAVE
         </div>
       </div>
       <Tracklist song={playlist.tracks} removeSong={removeTrack} />

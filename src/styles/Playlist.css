@@ -11,19 +11,28 @@
 }
 
 .name {
-  width: 80%;
+  width: 75%;
   background: rgba(0, 0, 0, 0);
   font-size: 2rem;
   color: gray;
   padding-left: 0;
   border: 0;
   font-family: "Catamaran", sans-serif;
+  margin-right: 15px;
 }
 
 .name:focus {
   outline: none;
   color: white;
 }
+
+/*
+font-family: 'Catamaran', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
 
 .renameButton {
   background: rgba(0, 0, 0, 0);
@@ -36,14 +45,15 @@
   border: 1px solid white;
   cursor: pointer;
   transition: all 0.2 ease-out;
+  font-family: "Raleway", sans-serif;
 }
 
 .renameButton:hover {
-  background: rgba(10, 126, 31, 0.4);
+  background: rgba(10, 136, 90, 0.8);
 }
 
 .renameButton:active {
-  background: rgba(10, 126, 31, 1);
+  background: rgba(10, 126, 90, 1);
 }
 
 .playlist {

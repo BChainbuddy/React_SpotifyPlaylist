@@ -1,8 +1,6 @@
 import Playlist from "./components/Playlist";
 import SearchBar from "./components/SearchBar";
 import SelectedSong from "./components/SelectedSong";
-import Tracklist from "./components/Tracklist";
-import logo from "./logo.svg";
 import "./styles/App.css";
 import React, { useEffect, useState } from "react";
 
@@ -84,7 +82,9 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <p style={{ paddingBottom: 20, paddingTop: 20 }}>JAMMING</p>
+        <p style={{ paddingBottom: 20, paddingTop: 20 }}>
+          JA<span style={{ color: "rgba(10, 136, 90, 1)" }}>MM</span>ING
+        </p>
       </header>
       <main>
         <SearchBar
