@@ -28,7 +28,7 @@ function App() {
   }
 
   const client_id = process.env.REACT_APP_CLIENT_ID; // Your client id
-  const redirect_uri = window.location.origin; // Your redirect uri
+  const redirect_uri = process.env.REACT_APP_REDIRECT_URI; // Your redirect uri
   const state = generateRandomString(16);
   console.log(process.env.CLIENT_ID);
   console.log("ABOVE IS CLIENT ID");
