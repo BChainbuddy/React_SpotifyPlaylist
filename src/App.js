@@ -106,8 +106,4 @@ function App() {
   );
 }
 
-{
-  /* <button onClick={removeToken}>LOGOUT</button> */
-}
-
 export default App;

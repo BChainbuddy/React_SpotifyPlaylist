@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./../styles/Track.css";
 
 function Track({ name, artist, album, image }) {

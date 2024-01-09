@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import react from "react";
 import Tracklist from "./Tracklist";
 import "./../styles/Playlist.css";
 
