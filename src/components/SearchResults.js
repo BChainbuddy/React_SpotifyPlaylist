@@ -24,13 +24,6 @@ function SearchResults({ tracks, addSelectedSong }) {
             album={item.album.name}
             image={item.album.images[0].url}
           />
-          {/* <button
-            onClick={() => {
-              addSelectedSong(item);
-            }}
-          >
-            ADD
-          </button> */}
         </div>
       ))}
     </div>

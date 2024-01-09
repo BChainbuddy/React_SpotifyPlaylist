@@ -8,6 +8,7 @@ function SearchBar({
   setSearchedTracks,
   playlist,
   setPlaylist,
+  setCurrentTrack,
 }) {
   const addSelectedSong = (song) => {
     if (!playlist.tracks.includes(song)) {
@@ -18,6 +19,7 @@ function SearchBar({
         };
       });
     }
+    setCurrentTrack(song);
   };
 
   const [search, setSearch] = useState("");
@@ -35,13 +37,14 @@ function SearchBar({
           headers: { Authorization: `Bearer ${accessToken}` },
         };
         fetch(
-          `https://api.spotify.com/v1/search?q=${search}&type=track&limit=5`,
+          `https://api.spotify.com/v1/search?q=${search}&type=track&limit=50`,
           params
         )
           .then((result) => result.json())
           .then((data) => {
             if (data.tracks) {
               setSearchedTracks(data.tracks.items);
+              console.log(data.tracks.items[0].preview_url);
               console.log(data.tracks.items[0].album.name);
               console.log(data.tracks.items[0].album.images[0].url);
             } else {

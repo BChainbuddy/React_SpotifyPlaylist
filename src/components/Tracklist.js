@@ -24,14 +24,6 @@ function Tracklist({ song, removeSong }) {
             album={item.album.name}
             image={item.album.images[0].url}
           />
-          {/* <button
-            onClick={() => {
-              removeSong(item.name);
-            }}
-            style={{ height: 20, width: 80 }}
-          >
-            REMOVE
-          </button> */}
         </div>
       ))}
     </div>

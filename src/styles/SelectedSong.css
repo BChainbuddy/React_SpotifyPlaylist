@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Caveat:wght@700&family=Lato:wght@300&family=Open+Sans:wght@300&family=Raleway:wght@200;300&display=swap");
+
+.selectedsongContainer {
+  width: 200px;
+}
+
+.selectedsong {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-player {
+  position: relative;
+}
+
+.audio-image {
+  display: block;
+}
+
+.icon {
+  position: absolute;
+  top: 36%;
+  left: 36%;
+  width: 50px;
+  height: 50px;
+  color: rgba(10, 136, 90, 0.7);
+  cursor: pointer;
+}
+
+.head {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Caveat", cursive;
+}
+
+.head2 {
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 2px;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  border-bottom: 0.5px solid white;
+}
+
+.songinfo {
+  color: white;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+/*
+font-family: 'Catamaran', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/

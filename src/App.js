@@ -1,5 +1,6 @@
 import Playlist from "./components/Playlist";
 import SearchBar from "./components/SearchBar";
+import SelectedSong from "./components/SelectedSong";
 import Tracklist from "./components/Tracklist";
 import logo from "./logo.svg";
 import "./styles/App.css";
@@ -12,6 +13,8 @@ function App() {
     name: "myPlaylist",
     tracks: [],
   });
+
+  const [currentTrack, setCurrentTrack] = useState("");
 
   const [accessToken, setAccessToken] = useState("");
 
@@ -74,14 +77,14 @@ function App() {
     }
   }, [accessToken]);
 
-  function removeToken() {
-    localStorage.removeItem("access_token");
-  }
+  // function removeToken() {
+  //   localStorage.removeItem("access_token");
+  // }
 
   return (
     <div className="App">
       <header className="header">
-        <p>JAMMING</p>
+        <p style={{ paddingBottom: 20, paddingTop: 20 }}>JAMMING</p>
       </header>
       <main>
         <SearchBar
@@ -90,7 +93,9 @@ function App() {
           searchedTracks={searchedTracks}
           playlist={playlist}
           setPlaylist={setPlaylist}
+          setCurrentTrack={setCurrentTrack}
         />
+        <SelectedSong currentTrack={currentTrack} />
         <Playlist
           playlist={playlist}
           setPlaylist={setPlaylist}

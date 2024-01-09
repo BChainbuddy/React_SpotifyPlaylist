@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Caveat:wght@700&family=Lato:wght@300&family=Open+Sans:wght@300&family=Raleway:wght@200;300&display=swap");
+
 .containerPlaylist {
   width: 300px;
-  backdrop-filter: blur(10px);
-  background: rgba(10, 30, 31, 0.15);
+  backdrop-filter: blur(15px);
+  background: rgba(10, 30, 31, 0.35);
   padding: 2px 2px;
   border: 1px solid white;
   padding: 20px;
@@ -15,6 +17,7 @@
   color: gray;
   padding-left: 0;
   border: 0;
+  font-family: "Catamaran", sans-serif;
 }
 
 .name:focus {
@@ -28,8 +31,22 @@
   color: white;
   font-size: 1rem;
   margin-bottom: 1px;
+  display: inline;
+  padding: 3px 7px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.2 ease-out;
+}
+
+.renameButton:hover {
+  background: rgba(10, 126, 31, 0.4);
+}
+
+.renameButton:active {
+  background: rgba(10, 126, 31, 1);
 }
 
 .playlist {
   border-bottom: 1px solid white;
+  margin-bottom: 10px;
 }
